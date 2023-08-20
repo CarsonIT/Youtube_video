@@ -1,0 +1,26 @@
+CREATE DATABASE YoutubeVideo
+
+CREATE TABLE Video (
+    video_id varchar(11),
+    trending_date date,
+    title nvarchar(300),
+    channel_title nvarchar(300),
+    category_id int,
+    publish_time datetime,
+    views int,
+    likes int,
+    dislikes int,
+    comment_count int,
+    country_id int
+);
+
+CREATE TABLE Category_video (
+    category_id int PRIMARY KEY,
+    category_name varchar(50)
+);
+
+CREATE TABLE Country (
+    country_id int PRIMARY KEY,
+    abbreviation varchar(2),
+    country_name varchar(60)
+);
